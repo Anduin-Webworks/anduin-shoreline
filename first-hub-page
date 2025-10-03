@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anduin Webworks</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #F2F0E4;
+            color: #0D0D0D;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            background: linear-gradient(135deg, #F2F0E4 0%, #F2C46D 100%);
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            color: #592B02;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #592B02;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: #0D0D0D;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background-color: #F26835;
+            color: #F2F0E4;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #F26835;
+        }
+
+        .cta-primary:hover {
+            background-color: #592B02;
+            border-color: #592B02;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(89, 43, 2, 0.3);
+        }
+
+        .section-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 28px;
+            color: #592B02;
+            text-align: center;
+            margin: 3rem 0 2rem;
+            line-height: 1.3;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(13, 13, 13, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(242, 104, 53, 0.2);
+            border-color: #F2C46D;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            color: #F26835;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #0D0D0D;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #592B02;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #F26835;
+        }
+
+        .project-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            color: #592B02;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #F2C46D;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #F2C46D;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(242, 196, 109, 0.3);
+        }
+
+        footer {
+            background-color: #592B02;
+            color: #F2F0E4;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #F2F0E4;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #F2C46D;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: #F26835;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 3rem 1rem 1.5rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .social-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anduin Webworks</h1>
+        <p class="tagline">Transformando ideias em experiências digitais</p>
+        <p class="hero-description">
+            Criamos aplicações web e páginas sob medida para empresas e profissionais que desejam destacar seus projetos com qualidade e design excepcional.
+        </p>
+        <a href="#contato" class="cta-primary">Vamos Conversar</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Nossos Projetos</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>JavaScript Apps</h3>
+                <p>Coleção de aplicações interativas desenvolvidas em JavaScript puro, demonstrando funcionalidades modernas e boas práticas.</p>
+                <a href="./projects/jsapps/index.html" class="project-link" target="_blank">Ver projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Alura Books</h3>
+                <p>Site responsivo de e-commerce para livros de tecnologia, com interface intuitiva e design moderno.</p>
+                <a href="./projects/alura-books/index.html" class="project-link" target="_blank">Ver projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Alura Play</h3>
+                <p>Plataforma de vídeos com funcionalidades de busca e adição de conteúdo, desenvolvida com HTML, CSS e JavaScript.</p>
+                <a href="./projects/alura-play/index.html" class="project-link" target="_blank">Ver projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfólio Completo</h3>
+                <p>Explore nossa vitrine completa de projetos, incluindo landing pages, aplicações web e muito mais.</p>
+                <a href="./portfolio.html" class="project-link">Ver todos os projetos</a>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="contato">Conecte-se Conosco</h2>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ofilipelima/" class="social-link" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+            <a href="https://github.com/oswaldovzki" class="social-link" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+            <a href="https://www.instagram.com/oswaldovzki/" class="social-link" target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=553195117017" class="social-link" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Anduin Webworks | Desenvolvido por <a href="https://github.com/oswaldovzki">Filipe de Lima</a></p>
+        <p style="margin-top: 0.5rem;">support@anduin-webworks.atlassian.net</p>
+    </footer>
+</body>
+</html>
