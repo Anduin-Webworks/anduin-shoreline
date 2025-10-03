@@ -1,0 +1,16 @@
+name: anduin-shoreline
+id: ari:cloud:compass:a9370046-464a-4000-8146-9d92acfbc728:component/70fcc8de-61e0-4324-b640-e292e7692006/f1a8d850-ce99-4e60-8b13-98903f6c997a
+description: Landing Hub for all Anduin Projects
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/Anduin-Webworks/anduin-shoreline
+relationships:
+  DEPENDS_ON: []
+labels:
+  - source:github
+customFields: null
