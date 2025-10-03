@@ -10,7 +10,7 @@ links:
   - name: Anduin Shoreline
     type: REPOSITORY
     url: https://github.com/Anduin-Webworks/anduin-shoreline
-    - name: Developers
+  - name: Developers
     type: PROJECT
     url: https://anduin-webworks.atlassian.net/jira/software/c/projects/DEV/summary
 relationships:
