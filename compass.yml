@@ -4,7 +4,7 @@ description: Landing Hub for all Anduin Projects
 configVersion: 1
 typeId: SERVICE
 fields:
-  tier: 4
+  tier: 1
 links:
   - name: null
     type: REPOSITORY
@@ -14,3 +14,4 @@ relationships:
 labels:
   - source:github
 customFields: null
+project: DEV
