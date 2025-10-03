@@ -4,9 +4,9 @@ description: Landing Hub for all Anduin Projects
 configVersion: 1
 typeId: SERVICE
 fields:
-  tier: 1
+  tier: 4
 links:
-  - name: null
+  - name: Anduin Shoreline
     type: REPOSITORY
     url: https://github.com/Anduin-Webworks/anduin-shoreline
 relationships:
@@ -14,4 +14,3 @@ relationships:
 labels:
   - source:github
 customFields: null
-project: DEV
